@@ -106,7 +106,7 @@ function contarMinasAlrededor(columna, fila)
   let contadorMinas = 0;
   for (let  i = fila-1; i <= fila+1; i++) {
     for(let j = columna-1; j <= columna+1; j++){
-      if(j<0 || i<0){
+      if((j<0 || i<0) || (j>=COLUMNAS || i>=FILAS)){
         continue;
       }
       if(tieneMinaCasillero(j,i)){
